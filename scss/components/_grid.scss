@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.int-grid {
+  width: auto;
+  height: auto;
+
+  .income-grid_container {
+    display: grid;
+    grid-template-rows: 48px [Line1] 48px [Line2] auto [Line3] auto [Line4] auto [Line5] auto [Line6] auto [Line7] auto [Line8] auto [Line9] auto [Line10] auto [Line11] auto [Line12] auto [Line13] auto [Line14] auto [Line15] auto [Line16] auto [Line17] auto [Line18] auto [Line19] auto [Line20] auto [Line21] auto [Line22] auto [Line23] auto [Line24] auto [Line25] auto [Line26] auto [Line27] auto [Line28] auto [Line29] auto [Line30] auto [Line31] auto [Line32] auto [Line33] auto [Line34] auto [Line35] auto [Line36] auto [Line37] auto [Line38] auto [Line39] auto [Line40] auto [Line41] auto [Line42] auto [Line43] auto [Line44] auto [Line45] auto [Line46] auto [Line47] auto [Line48] auto [Line49] auto [Line50] auto [Line5] auto [Line52] auto [Line53] auto [Line54] auto [Line55] auto [Line56] auto [Line57] auto [Line58] auto [Line59] auto [Line60] auto [Line61] auto [Line62] auto [Line63] auto [Line64] auto [Line65] auto [Line66] auto [Line67] auto [Line68];
+    grid-template-columns: repeat(19, 1fr);
+    grid-gap: 0px;
+    min-width: 1024px;
+    margin-bottom: 21;
+  }
+}

@@ -1,0 +1,463 @@
+@mixin comp-tf-sc {
+    float: left;
+    width: 100%;
+    height: auto;
+    min-height: 48px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+@mixin radio-structure($color) {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: -1px;
+    border-radius: 50%;
+    border: 2px solid $color;
+}
+
+@mixin rwd-max($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
+
+@mixin box-sizing($box) {
+    box-sizing: $box;
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+}
+
+@mixin grid_builder() {
+    $currency_cnt-col: 1;
+    $lcl_cnt-col: 1;
+    $usd_cnt-col: 1;
+
+    @for $i from 1 through $gi_rows_length {
+
+        @if $i==1 {
+
+            .int-grid_line-#{$i}t_account {
+                top: 48px;
+                text-align: center;
+                border-bottom: 2px solid #333;
+                padding: 60px 8px 0 8px;
+                grid-column: 1 / span 3;
+                grid-row: 1 / Line2;
+                background-color: #FFF;
+
+                label {
+                    width: max-content;
+                    text-align: center;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+            }
+
+            .int-grid_line-#{$i}t_currency {
+                top: 48px;
+                font-size: 1.2em;
+                text-align: center;
+                padding: 12px 8px;
+                grid-column: 4 / span 6;
+                grid-row: 1 / Line1;
+                border-left: 1px solid #333;
+                background-color: #E2F1FD;
+
+                label {
+                    width: max-content;
+                    text-align: center;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+            }
+
+            .int-grid_line-#{$i}t_local {
+                top: 48px;
+                text-align: center;
+                padding: 12px 8px;
+                grid-column: 10 / span 4;
+                grid-row: 1 / Line1;
+                border-left: 1px solid #333;
+                background-color: #FFFDE7;
+
+                label {
+                    width: max-content;
+                    text-align: center;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+
+                img {
+                    float: right;
+                    cursor: pointer;
+                }
+            }
+
+            .int-grid_line-#{$i}t_usd {
+                top: 48px;
+                text-align: center;
+                padding: 12px 8px;
+                grid-column: 14 / span 4;
+                grid-row: 1 / Line1;
+                border-left: 1px solid #333;
+                background-color: #DEECD5;
+
+                label {
+                    width: max-content;
+                    text-align: center;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+
+                img {
+                    float: right;
+                    cursor: pointer;
+                }
+            }
+
+
+            .int-grid_line-#{$i}t_notes {
+                top: 48px;
+                text-align: center;
+                padding: 60px 8px 0 8px;
+                grid-column: 18 / span 3;
+                grid-row: 1 / Line2;
+                border-bottom: 2px solid #333;
+                border-left: 1px solid #333;
+                background-color: #FFF;
+
+                label {
+                    width: max-content;
+                    text-align: center;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+            }
+        }
+
+
+        @if $i==2 {
+            @for $currency_cnt-col from 1 through 6 {
+                .int-grid_line-#{$i}t-currency {
+                    top: 96px;
+                    text-align: center;
+                    font-size: 1em;
+                    font-weight: 500;
+                    padding: 12px 8px;
+                    border-bottom: 2px solid #333;
+                    border-left: 1px solid #333;
+                    background-color: #E2F1FD;
+                }
+            }
+
+            @for $lcl_cnt-col from 1 through 4 {
+                @if $lcl_cnt-col==1 {
+                    .int-grid_line-#{$i}t-local_uc {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #FFFDE7;
+                    }
+                }
+
+                @if $lcl_cnt-col==2 {
+                    .int-grid_line-#{$i}t-local_r {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #FFFDE7;
+                    }
+                }
+
+                @if $lcl_cnt-col==3 {
+                    .int-grid_line-#{$i}t-local_ue {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #FFFDE7;
+                    }
+                }
+
+                @if $lcl_cnt-col==4 {
+                    .int-grid_line-#{$i}t-local_t {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-image: linear-gradient(to bottom, #FFFDE7, #FFF9C4);
+                    }
+                }
+            }
+
+            @for $usd_cnt-col from 1 through 4 {
+                @if $usd_cnt-col==1 {
+                    .int-grid_line-#{$i}t-usd_uc {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #DEECD5;
+                    }
+                }
+
+                @if $usd_cnt-col==2 {
+                    .int-grid_line-#{$i}t-usd_r {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #DEECD5;
+                    }
+                }
+
+                @if $usd_cnt-col==3 {
+                    .int-grid_line-#{$i}t-usd_ue {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-color: #DEECD5;
+                    }
+                }
+
+                @if $usd_cnt-col==4 {
+                    .int-grid_line-#{$i}t-usd_t {
+                        top: 96px;
+                        text-align: center;
+                        font-size: 1em;
+                        font-weight: 500;
+                        padding: 12px 8px;
+                        border-bottom: 2px solid #333;
+                        border-left: 1px solid #333;
+                        background-image: linear-gradient(to bottom, #DEECD5, #C5E1A5);
+                    }
+                }
+            }
+        }
+
+
+        @if $i>2 {
+            $id: $i - 2;
+
+            .int-grid_line-#{$id}d_account {
+                text-align: center;
+                grid-column: 1 / span 3;
+                grid-row: #{$i} / Line#{$i};
+                border-bottom: 1px solid #999;
+                border-left: 1px solid #999;
+                padding: 2% 0;
+
+                input {
+                    font-size: small;
+                    width: 89%;
+                    margin: 3px 0;
+                    text-align: left;
+                }
+            }
+
+            @for $currency_cnt-col from 1 through 6 {
+                @debug("Currency:"+ #{$currency_cnt-col});
+
+                .int-grid_line-#{$id}d-currency {
+                    text-align: center;
+                    border-bottom: 1px solid #999;
+                    border-left: 1px solid #999;
+                    background-color: #bbdefb6e;
+
+                    input {
+                        font-size: 1em;
+                        width: 85%;
+                        margin: 25px 0;
+                    }
+                }
+            }
+
+            @for $lcl_cnt-col from 1 through 4 {
+                @debug("LCL - Local:"+ #{$lcl_cnt-col});
+
+                @if $lcl_cnt-col==1 {
+                    .int-grid_line-#{$id}d-local_uc {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #FFFDE7;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $lcl_cnt-col==2 {
+                    .int-grid_line-#{$id}d-local_r {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #FFFDE7;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $lcl_cnt-col==3 {
+                    .int-grid_line-#{$id}d-local_ue {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #FFFDE7;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $lcl_cnt-col==4 {
+                    .int-grid_line-#{$id}d-local_t {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #FFF9C4;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+            }
+
+            @for $usd_cnt-col from 1 through 4 {
+                @debug("USD:"+ #{$usd_cnt-col});
+
+                @if $usd_cnt-col==1 {
+                    .int-grid_line-#{$id}d-usd_uc {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #DEECD5;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $usd_cnt-col==2 {
+                    .int-grid_line-#{$id}d-usd_r {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #DEECD5;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $usd_cnt-col==3 {
+                    .int-grid_line-#{$id}d-usd_ue {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #DEECD5;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                @if $usd_cnt-col==4 {
+                    .int-grid_line-#{$id}d-usd_t {
+                        text-align: center;
+                        border-bottom: 1px solid #999;
+                        border-left: 1px solid #999;
+                        background-color: #C5E1A5;
+
+                        input {
+                            font-size: 1em;
+                            width: 85%;
+                            margin: 25px 0;
+                        }
+                    }
+                }
+
+                /* */
+                /* */
+                .int-grid_line-#{$id}d-usd {
+                    text-align: center;
+                    border-bottom: 1px solid #999;
+                    border-left: 1px solid #999;
+                    background-color: #DEECD5;
+
+                    input {
+                        font-size: 1em;
+                        width: 85%;
+                        margin: 25px 0;
+                    }
+                }
+            }
+
+            .int-grid_line-#{$id}d_notes {
+                text-align: center;
+                grid-column: 18 / span 3;
+                grid-row: #{$i} / Line#{$i};
+                border-bottom: 1px solid #999;
+                border-left: 1px solid #999;
+                border-right: 1px solid #999;
+
+                textarea {
+                    resize: none;
+                    font-size: 1em;
+                    width: 95%;
+                    height: 85%;
+                    margin: 4.5px 0;
+                }
+            }
+        }
+    }
+}

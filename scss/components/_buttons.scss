@@ -1,0 +1,31 @@
+.button {
+    float: right;
+    min-width: 64px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 16px;
+    border-radius: $radius;
+    letter-spacing: 1pt; 
+    background-color: #448AFF;
+    @include box-sizing(border-box);
+
+    .button__container {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+                justify-content: center;
+        @include box-sizing(border-box);
+
+        .button-label {
+            display: table;
+            min-width: 64px;
+            font-size: 1em;
+            text-align: center;
+            font-style: normal;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: #FFF;
+            @include box-sizing(border-box);
+        }
+    }
+}
