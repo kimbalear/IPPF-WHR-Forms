@@ -20,12 +20,32 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
   font: 12pt;
 }
 
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+[data-button] {
+  position: fixed;
+  top: 20px;
+  left: 16px;
+}
+
+.panel_options {
+  width: 100%;
+  height: 64px;
+  color: #FFF;
+  padding: 0 76px;
+  background-color: #000;
+
+  div {
+    float: left;
+    padding: 21px 4px;
+  }
 }
 
 .report {
@@ -42,21 +62,45 @@ body {
       height: auto;
       padding: 8px;
       text-align: center;
-      background-color: #008DC9;
 
       .logo_h {
         content: url("https://beckolsystem.com/form_pdf/img/IPPF_logo_web.png");
       }
     }
 
-    .report_details {
+    .report_title {
       width: 100%;
       height: auto;
       text-align: center;
-      padding: 100px 0 50px 0;
+      padding: 100px 0 21px 0;
       font-size: 2em;
       letter-spacing: 1px;
       font-weight: 600;
+    }
+
+    .report_subtitle {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 0 50px;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .report_generate {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 21px 50px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .report_details {
+      width: 100%;
+      height: auto;
     }
 
     .report_details_content {
@@ -95,7 +139,7 @@ body {
         color: #FFF;
         font-weight: 400;
         letter-spacing: 1px;
-        background-color: #60BE94;
+        background-color: #A10185;
       }
 
       .answers {
@@ -120,7 +164,7 @@ body {
       letter-spacing: 1px;
       font-weight: 600;
       color: #FFF;
-      background-color: #60BE94;
+      background-color: #A10185;
     }
 
     .title_h3 {
@@ -148,7 +192,7 @@ body {
       color: #FFF;
       font-weight: 400;
       letter-spacing: 1px;
-      background-color: #60BE94;
+      background-color: #A10185;
     }
 
     .answers {
@@ -188,8 +232,12 @@ body {
         padding: 16px 8px;
         font-size: 0.9em;
         letter-spacing: 1px;
+      }
+
+      td {
         border-bottom: 1px solid #ddd;
       }
+
       .ccy {
         color: #000;
       }
@@ -201,6 +249,14 @@ body {
 
       .notes {
         width: 150px;
+      }
+
+      .bder_right {
+        border-right: 1px solid #ddd;
+      }
+
+      .bder_bttm {
+        border-bottom: 1px solid #ddd;
       }
     }
 
@@ -360,7 +416,7 @@ body {
               color: #FFF;
               font-weight: 600;
               letter-spacing: 1px;
-              background-color: #60BE94;
+              background-color: #A10185;
             }
 
             .projet_reriod-date-data {
@@ -386,7 +442,7 @@ body {
               font-size: 1.2em;
               font-weight: 600;
               letter-spacing: 1px;
-              background-color: #60BE94;
+              background-color: #A10185;
             }
 
             .projet_reriod-description-data {
@@ -461,12 +517,6 @@ body {
   }
 }
 
-[data-button] {
-  position: fixed;
-  top: .2in;
-  left: .125in;
-}
-
 @media print {
   html {
     margin: 0;
@@ -485,12 +535,15 @@ body {
     display: none;
   }
 
+  .panel_options{
+    display: none;
+  }
+
   .report {
 
     .subpage {
 
       .head_report {
-        background-color: #FFF;
 
         .logo_h {
           content: url("https://beckolsystem.com/form_pdf/img/IPPF_logo_print.png");
@@ -516,7 +569,7 @@ body {
       }
 
       .title_h3 {
-        page-break-before:always;
+        page-break-before: always;
       }
 
       .questions {
