@@ -1,0 +1,27 @@
+.w_expenditure {
+  width: 100%;
+  height: auto;
+  max-height: 50%;
+  background-color: #FFF3E0;
+  box-sizing: border-box;
+
+  .w_expenditure__title {
+    float: left;
+    width: auto;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+  }
+  .img_expand_contract {
+    float: left;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    box-sizing: border-box;
+    
+}
+}

@@ -1,0 +1,303 @@
+.w_income {
+    clear: both;
+    width: max-content;
+    height: auto;
+    //background-color: #B9F6CA;
+    width: max-content;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+
+    .income_title {
+        float: left;
+        width: auto;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 16px;
+        font-size: 1.2em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+    }
+
+    .img_expand_contract {
+        float: left;
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+        box-sizing: border-box;
+
+    }
+
+    .w_income__rows {
+        clear: both;
+        width: max-content;
+        height: auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        .w_income__rows_row {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+
+            .w_incoming__head {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+            }
+
+            .w_incoming__body {
+                width: max-content;
+                max-height: 50%;
+                //background-color: #B9F6CA;
+                overflow-y: auto;
+                box-sizing: border-box;
+
+                &::-webkit-scrollbar {
+                    -webkit-appearance: none;
+                }
+
+                &::-webkit-scrollbar:vertical {
+                    width: 10px;
+                }
+
+                &::-webkit-scrollbar-button:increment,
+                .contenedor::-webkit-scrollbar-button {
+                    display: none;
+                }
+
+                &::-webkit-scrollbar:horizontal {
+                    height: 10px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #797979;
+                    border-radius: 20px;
+                    border: 2px solid #f1f2f3;
+                }
+
+                &::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                }
+            }
+
+
+            .w_accounts {
+                width: 100%;
+                height: auto;
+                min-height: 47px;
+                line-height: 48px;
+                box-sizing: border-box;
+
+                label {
+                    line-height: 24px;
+                    font-size: 0.5em;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .account_name__row {
+                float: left;
+                width: auto;
+                height: auto;
+                min-height: 48px;
+                border-bottom: solid 0.5px #ddd;
+                box-sizing: border-box;
+
+                .w_col_p {
+                    width: auto;
+                    height: auto;
+                    min-height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+                    box-sizing: border-box;
+
+                    .w_col_p__title {
+                        width: 100%;
+                        height: 48px;
+                        //color: $color_black;
+                        line-height: 48px;
+                        font-weight: 500;
+                        text-align: center;
+                        box-sizing: border-box;
+                    }
+
+                    .w_col_c-heading {
+                        float: left;
+                        width: 200px;
+                        padding: 0 4px;
+                        height: auto;
+                        min-height: 47px;
+                        box-sizing: border-box;
+
+                        .w_col_c__title {
+                            width: 100%;
+                            height: 48px;
+                            line-height: 48px;
+                            font-weight: 500;
+                            font-size: 0.8em;
+                            //color: $color_black;
+                            text-align: center;
+                            box-sizing: border-box;
+                        }
+                    }
+
+
+                    .w_col_c {
+                        float: left;
+                        width: auto;
+                        min-width: 70px;
+                        max-width: 120px;
+                        padding: 0 4px;
+                        height: auto;
+                        min-height: 47px;
+                        box-sizing: border-box;
+
+                        .w_col_c__title {
+                            width: 100%;
+                            height: 48px;
+                            line-height: 48px;
+                            font-weight: 500;
+                            font-size: 0.8em;
+                            //color: #FFF;
+                            text-align: center;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .w_col_cta {
+                        float: left;
+                        width: 48px;
+                        height: auto;
+                        min-height: 48;
+                        min-height: 47px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+
+        .w_line {
+            clear: both;
+            width: auto;
+            height: auto;
+            min-height: 48px;
+            border-bottom: solid 0.5px #ddd;
+            box-sizing: border-box;
+
+            .w_col_p {
+                width: auto;
+                height: auto;
+                min-height: 48px;
+                line-height: 48px;
+                text-align: center;
+                //background-color: transparent;
+                box-sizing: border-box;
+
+                .w_col_p__title {
+                    width: 100%;
+                    height: 48px;
+                    line-height: 48px;
+                    font-weight: 500;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+
+                .w_col_c-heading {
+                    float: left;
+                    width: 200px;
+                    padding: 0 4px;
+                    height: auto;
+                    min-height: 47px;
+                    //background-color: #FFF;
+                    box-sizing: border-box;
+
+                    .w_col_c__data {
+                        width: 100%;
+                        height: 48px;
+                        font-size: 0.5em;
+                        font-weight: 400;
+                        text-align: center;
+                        box-sizing: border-box;
+
+                        .w_col_c__data-line {
+                            width: 100%;
+                            text-align: left;
+                            padding: 0 8px;
+                            box-sizing: border-box;
+
+                            label {
+                                line-height: 20px;
+                                font-size: 0.5em;
+                                font-weight: 500;
+                                box-sizing: border-box;
+                            }
+
+                            span {
+                                line-height: 12px;
+                                font-weight: 300;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+
+                .w_col_c {
+                    float: left;
+                    width: auto;
+                    //min-width: 70px;
+                    max-width: 70px;
+                    padding: 0 4px;
+                    height: auto;
+                    min-height: 47px;
+                    //background-color: #FFF;
+                    box-sizing: border-box;
+
+                    .w_col_c__data {
+                        width: 100%;
+                        height: 48px;
+                        line-height: 48px;
+                        font-size: 0.5em;
+                        font-weight: 400;
+                        text-align: center;
+                        padding: 14px 0;
+                        box-sizing: border-box;
+
+                        input {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            //line-height: 48px;
+                            font-size: 0.5em;
+                            font-weight: 400;
+                            max-width: 300px;
+                        }
+                    }
+
+                    .w_note {
+                        text-align: justify;
+                        line-height: 24px;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .w_col_cta {
+                    float: left;
+                    width: 48px;
+                    height: 48px;
+                    padding: 12px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+.income_con {
+    cursor: pointer
+}
+
+.income_exp {
+    cursor: pointer
+}
