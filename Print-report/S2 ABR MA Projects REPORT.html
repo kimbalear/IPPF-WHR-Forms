@@ -1,43 +1,831 @@
-<html>
 
-<head>
+<!-- saved from url=(0043)https://beckolsystem.com/form_pdf/form.html -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>WHR</title>
-  <meta charset="UTF-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="../scripts/main.js"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <script src="https://raw.githubusercontent.com/jturtler/whr/master/dataSet_project/HTML%20Report/WHR_files/jquery-3.5.1.min.js"></script>
+  <script src="https://raw.githubusercontent.com/jturtler/whr/master/dataSet_project/HTML%20Report/WHR_files/jquery-ui.js"></script>
 </head>
+  
+<style>
+  /* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxFIzIFKw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxMIzIFKw.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxEIzIFKw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxLIzIFKw.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxHIzIFKw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxGIzIFKw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font: 12pt;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.panel_options {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 96px;
+  background-color: #000;
+}
+.panel_options div {
+  float: left;
+  width: auto;
+  margin: 16px 4px 8px;
+  height: 24px;
+  color: #FFF;
+  background-color: #000;
+}
+.panel_options .prt_options {
+  float: right;
+  padding-right: 16px;
+}
+.panel_options .l2_options {
+  clear: both;
+}
+
+.report .subpage {
+  margin: 15mm;
+  padding: 8px;
+  height: auto;
+}
+.report .subpage .head_report {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  text-align: center;
+}
+.report .subpage .head_report .logo_h {
+  content: url("https://beckolsystem.com/form_pdf/img/IPPF_logo_web.png");
+}
+.report .subpage .report_title {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 100px 0 21px 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.report .subpage .report_subtitle {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0 50px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.report .subpage .report_generate {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 21px 50px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.report .subpage .report_details {
+  width: 100%;
+  height: auto;
+}
+.report .subpage .report_details_content {
+  width: 100%;
+  height: auto;
+  padding: 21px 21px 8px 0;
+}
+.report .subpage .report_details_content .report_details_content-child {
+  float: left;
+  width: 50%;
+  height: auto;
+  font-size: 1em;
+  white-space: pre;
+  letter-spacing: 1px;
+}
+.report .subpage .report_details_content .report_details_content-child label {
+  font-weight: 600;
+  line-height: 48px;
+}
+.report .subpage .questions_answers {
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 4px 0;
+}
+.report .subpage .questions_answers .questions {
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  padding: 8px;
+  text-align: left;
+  font-size: 1em;
+  color: #FFF;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-color: #A10185;
+}
+.report .subpage .questions_answers .answers {
+  width: 100%;
+  height: auto;
+  padding: 4px 0;
+  text-align: justify;
+  font-size: 1em;
+  color: #333;
+  letter-spacing: 1px;
+}
+.report .subpage .title_h2 {
+  clear: both;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin-top: 48px;
+  padding: 8px 4px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #A10185;
+}
+.report .subpage .title_h3 {
+  clear: both;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 48px 0 8px 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin: 50px 0 21px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.report .subpage .questions {
+  clear: both;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  margin: 21px 0 21px 0;
+  padding: 8px;
+  text-align: left;
+  font-size: 1em;
+  color: #FFF;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-color: #A10185;
+}
+.report .subpage .answers {
+  clear: both;
+  width: 100%;
+  height: auto;
+  padding: 4px 0;
+  text-align: justify;
+  font-size: 1em;
+  color: #333;
+  letter-spacing: 1px;
+}
+.report .project_title {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 21px 0 8px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.report .content_grl {
+  clear: both;
+  padding: 21px 0;
+}
+.report .content_grl table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 21px;
+  box-sizing: content-box;
+}
+.report .content_grl table th,
+.report .content_grl table td {
+  min-width: 100px;
+  padding: 16px 8px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+.report .content_grl table td {
+  border-bottom: 1px solid #ddd;
+}
+.report .content_grl table .ccy {
+  color: #000;
+}
+.report .content_grl table .c_total {
+  min-width: 100px;
+}
+.report .content_grl table .notes {
+  width: 150px;
+}
+.report .content_grl table .bder_right {
+  border-right: 1px solid #ddd;
+}
+.report .content_grl table .bder_bttm {
+  border-bottom: 1px solid #ddd;
+}
+.report .content_grl .content_grl_line-t {
+  width: 100%;
+  height: auto;
+}
+.report .content_grl .content_grl_line-t .content_grl_line_child-t {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1.2em;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.report .content_grl .content_grl_line {
+  clear: both;
+  width: 100%;
+  height: auto;
+  border-bottom: 0.5px solid #ccc;
+}
+.report .content_grl .content_grl_line .content_grl_line_child {
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.report .content_grl .content_grl_line-nl {
+  clear: both;
+  width: 100%;
+  height: auto;
+}
+.report .content_grl .content_grl_line-nl .content_grl_line_child {
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.report .content_grl .content_grl_two-line-t {
+  height: auto;
+}
+.report .content_grl .content_grl_two-line-t .content_grl_two-line_child-t {
+  float: left;
+  height: auto;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1.2em;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #CCC;
+}
+.report .content_grl .content_grl_two-line-t .content_grl_two-line_child-t label {
+  font-weight: 600;
+  line-height: 48px;
+}
+.report .content_grl .content_grl_two-line {
+  clear: both;
+  height: auto;
+  border-bottom: 0.5px solid #ccc;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child-t {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #333;
+  font-weight: 600;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child-t label {
+  font-weight: 600;
+  line-height: 48px;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child {
+  float: left;
+  height: auto;
+  min-height: 48px;
+  padding: 21px 8px;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child label {
+  font-weight: 600;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .m_rows {
+  float: left;
+  width: 100%;
+  min-height: 48px;
+  padding: 4px 0;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .m_rows .m_rows-chips {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-right: 4px;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .m_rows-b {
+  float: left;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod {
+  width: 100%;
+  height: auto;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-date {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-date .projet_reriod-date-title {
+  width: 100%;
+  height: auto;
+  color: #FFF;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1.2em;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #A10185;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-date .projet_reriod-date-data {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-description {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-description .projet_reriod-description-title {
+  width: 100%;
+  height: auto;
+  width: 100%;
+  height: auto;
+  color: #FFF;
+  text-align: left;
+  padding: 21px 0 8px 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #A10185;
+}
+.report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-description .projet_reriod-description-data {
+  padding: 8px;
+  width: 100%;
+  height: auto;
+}
+.report .w05 {
+  width: 5%;
+}
+.report .w10 {
+  width: 10%;
+}
+.report .w20 {
+  width: 20%;
+}
+.report .w30 {
+  width: 30%;
+}
+.report .w40 {
+  width: 40%;
+}
+.report .w50 {
+  width: 50%;
+}
+.report .w60 {
+  width: 60%;
+}
+.report .w70 {
+  width: 70%;
+}
+.report .w80 {
+  width: 80%;
+}
+.report .w90 {
+  width: 90%;
+}
+.report .w100 {
+  width: 100%;
+}
+.report .fa_l {
+  text-align: left;
+}
+.report .fa_c {
+  text-align: center;
+}
+.report .fa_r {
+  text-align: right;
+}
+.report .fa_j {
+  text-align: justify;
+}
+
+@media print {
+  html {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  body {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  [data-button] {
+    display: none;
+  }
+
+  .panel_options {
+    display: none;
+  }
+
+  .report .subpage .head_report .logo_h {
+    content: url("https://beckolsystem.com/form_pdf/img/IPPF_logo_print.png");
+  }
+  .report .subpage .questions_answers .questions {
+    padding: 0;
+    color: #000;
+    min-height: 48px;
+    background-color: #FFF;
+  }
+  .report .subpage .title_h2 {
+    text-transform: uppercase;
+    color: #000;
+    background-color: #FFF;
+  }
+  .report .subpage .title_h3 {
+    page-break-before: always;
+  }
+  .report .subpage .questions {
+    text-transform: uppercase;
+    padding: 0;
+    color: #000;
+    min-height: 48px;
+    background-color: #FFF;
+  }
+  .report .content_grl .content_grl_line-t .content_grl_line_child-t {
+    text-transform: uppercase;
+    color: #333;
+    background-color: #FFF;
+  }
+  .report .content_grl .content_grl_two-line-t .content_grl_two-line_child-t {
+    text-transform: uppercase;
+    color: #333;
+    background-color: #FFF;
+  }
+  .report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-date .projet_reriod-date-title {
+    text-transform: uppercase;
+    color: #333;
+    background-color: #FFF;
+  }
+  .report .content_grl .content_grl_two-line .content_grl_two-line_child .projet_reriod .projet_reriod-description .projet_reriod-description-title {
+    text-transform: uppercase;
+    color: #333;
+    background-color: #FFF;
+  }
+
+  :not(nav) > [href]:not([href^="#"]):after {
+    content: " (" attr(href) ") ";
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    /* Prevents rows from breaking */
+  }
+
+  td {
+    font-size: 6pt;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 20mm auto;
+  }
+  .content_grl {
+    page-break-inside: auto;
+  }
+  .content_grl div {
+    page-break-before: avoid;
+    page-break-after: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+</style>
 <body>
   <div class="panel_options">
     <div>
-      <label for="Organisation">Organisation Unit:</label>
-      <select name="Organisation" id="Organisation">
-        <option value="407">CIES (407)</option>
+      <label for="organisation">Organisation Unit:</label>
+      <select name="organisation" id="organisation">
+          <option value="" >[Please select]</option>
+        <option value="hrqvQYvEId3" code="407">CIES (407)</option>
         <option value="HYR">and others</option>
       </select>
     </div>
     <div>
-      <label for="Period">Period:</label>
-      <select name="Period" id="Period">
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2030">2030</option>
+      <label for="period">Period:</label>
+      <select name="period" id="period"> </select>
+    </div>
+    <div>
+      <label for="process">ABR Process:</label>
+      <select name="process" id="process">
+        <option value="" >[Please select]</option>
+        <option value="W5Pp1UkCfSt;W5CScc58WXV" process="W5Pp1UkCfSt" project="W5CScc58WXV" code="APB">Annual Program Budget (APB)</option>
+        <option value="BClBhbDuLJ9" code="HYR">Half Year Report (HYR)</option>
+        <option value="oWFNEhKMRbJ" code="AR">Annual Report (AR)</option>
       </select>
     </div>
     <div>
-      <label for="Process">ABR Process:</label>
-      <select name="Process" id="Process">
-        <option value="APB">Annual Program Budget (APB)</option>
-        <option value="HYR">Half Year Report (HYR)</option>
-        <option value="AR">Annual Report (AR)</option>
-      </select>
-    </div>
-    <div class="l2_options">
       <label for="currency">Format currency:</label>
       <select name="currency" id="currency">
         <option value="1">#,###.###</option>
@@ -52,10 +840,18 @@
         <option value="fr">French</option>
       </select>
     </div>
-    <div class="prt_options"><input type=button data-button=outline value="Print" onclick=print()></div>
   </div>
-  
-  <div class="report">
+
+  <input type="button" data-button="outline" value="Print" onclick="print()">
+ 
+  <div id="formLoadingDiv" class="loaderDiv" style="display: none;">
+      <br><br><br>
+      <img src="../images/ajax-loader-circle.gif">
+      <br><br><br>
+      <p>Setting up the form...</p>
+    </div>
+
+  <div class="report" style="display:none;">
     <div class="page">
       <div class="subpage">
         <div class="head_report"><img class="logo_h" alt="" width="330px" height="203px"></div>
@@ -66,12 +862,12 @@
         <div class="title_h2">Details</div>
         <div class="content_grl">
           <div class="content_grl_two-line">
-            <div class="content_grl_two-line_child w50"><label>Working xRate: </label><span>6.92</span></span>
+            <div class="content_grl_two-line_child w50"><label>Working xRate: </label><span deId="rG07teY4mgz-X66r2y4EuwS"></span>
             </div>
             <div class="content_grl_two-line_child w50"><label>Support documents: </label><span>##</span></div>
           </div>
           <div class="content_grl_two-line">
-            <div class="content_grl_two-line_child w50"><label>Working currency: </label><span>BOB</span></div>
+            <div class="content_grl_two-line_child w50"><label>Working currency: </label><span deId="VJCThRinUQO-X66r2y4EuwS-val">BOB</span></div>
             <div class="content_grl_two-line_child w50"></div>
           </div>
           <div class="content_grl_two-line"></div>
@@ -240,7 +1036,7 @@
                 RECOMENDATIONS</label></div>
           </div>
           <div class="content_grl_two-line w100">
-            <div class="content_grl_two-line_child w30">M&E</div>
+            <div class="content_grl_two-line_child w30">M&amp;E</div>
             <div class="content_grl_two-line_child w30">Not provided</div>
             <div class="content_grl_two-line_child w40">Efficiently build reliable scenarios after 24/365.</div>
           </div>
@@ -400,7 +1196,7 @@
               architectures. Dynamically aggregate backend outsourcing rather than functional functionalities.
               Proactively parallel task multimedia based meta-services via market-driven markets. Professionally
               revolutionize prospective e-commerce after worldwide meta-services.</div>
-          </div>>
+          </div>&gt;
           <div class="content_grl_line-t">
             <div class="content_grl_line_child-t">OUTCOME 4: UNITE AND PERFORM</div>
           </div>
@@ -449,7 +1245,7 @@
             <div class="content_grl_two-line_child w50"><label>Start Date: </label><span>DD-MMM-YYYYY</span></div>
           </div>
           <div class="content_grl_two-line">
-            <div class="content_grl_two-line_child w50"><label>&#10004; </label>Mgmt and Gen Servs Project<span></span>
+            <div class="content_grl_two-line_child w50"><label>✔ </label>Mgmt and Gen Servs Project<span></span>
             </div>
             <div class="content_grl_two-line_child w50"><label>End Date: </label><span>DD-MMM-YYYYY</span></div>
           </div>
@@ -471,7 +1267,7 @@
               supporting materials</div>
           </div>
           <div class="content_grl_line">
-            <div class="content_grl_line_child">PO4: Build MA capacity on media & communications</div>
+            <div class="content_grl_line_child">PO4: Build MA capacity on media &amp; communications</div>
           </div>
           <div class="content_grl_line">
             <div class="content_grl_line_child">PO6: Strengthen and expand Associated Clinic models</div>
@@ -506,9 +1302,9 @@
             <div class="content_grl_line_child-t">Contact details</div>
           </div>
           <div class="content_grl_two-line">
-            <div class="content_grl_two-line_child w50"><label>Name: </label><span>Marco Murillo</span>
+            <div class="content_grl_two-line_child w50"><label>Name: </label><span deId="k77PVfjbsgd-X66r2y4EuwS">Marco Murillo</span>
             </div>
-            <div class="content_grl_two-line_child w50"><label>Email: </label><span>marco.m@psi.org</span></div>
+            <div class="content_grl_two-line_child w50"><label>Email: </label><span deId="Fnq135Rj7fO-X66r2y4EuwS">marco.m@psi.org</span></div>
           </div>
         </div>
         <div class="content_grl">
@@ -567,11 +1363,11 @@
             <div class="content_grl_two-line_child w20 fa_r">25%</div>
           </div>
           <div class="content_grl_two-line w100">
-            <div class="content_grl_two-line_child w80">Building Capacity, Processes & Procedures</div>
+            <div class="content_grl_two-line_child w80">Building Capacity, Processes &amp; Procedures</div>
             <div class="content_grl_two-line_child w20 fa_r">25%</div>
           </div>
           <div class="content_grl_two-line w100">
-            <div class="content_grl_two-line_child w80">Organization Learning & Evaluation (note - this includes</div>
+            <div class="content_grl_two-line_child w80">Organization Learning &amp; Evaluation (note - this includes</div>
             <div class="content_grl_two-line_child w20 fa_r">25%</div>
           </div>
           <div class="content_grl_two-line w100">
@@ -616,7 +1412,7 @@
           </div>
         </div>
         <div class="questions_answers">
-          <div class="title_h2">Outcome & Objective</div>
+          <div class="title_h2">Outcome &amp; Objective</div>
           <div class="content_grl w100">
             <div class="content_grl_two-line w100">
               <div class="content_grl_two-line_child w80"><label>Outcome 1: Champion rights</label></div>
@@ -662,7 +1458,7 @@
         <div class="title_h2">Income</div>
         <div class="content_grl">
           <table>
-            <tr>
+            <tbody><tr>
               <th class="fa_c bder_right bder_bttm" rowspan="2">Accounts</th>
               <th class="fa_c bder_right bder_bttm" colspan="6">Currency</th>
               <th class="fa_c bder_right"></th>
@@ -670,14 +1466,14 @@
               <th class="fa_c bder_bttm" rowspan="2">Notes</th>
             </tr>
             <tr>
-              <th class="fa_c bder_right bder_bttm"">C</th>
-              <th class="fa_c bder_right bder_bttm"">UC</th>
-              <th class="fa_c bder_right bder_bttm"">R</th>
-              <th class="fa_c bder_right bder_bttm"">UE</th>
+              <th class="fa_c bder_right bder_bttm" "="">C</th>
+              <th class="fa_c bder_right bder_bttm" "="">UC</th>
+              <th class="fa_c bder_right bder_bttm" "="">R</th>
+              <th class="fa_c bder_right bder_bttm" "="">UE</th>
               <th class="fa_c c_total bder_right bder_bttm">Total</th>
               <th class="fa_c bder_right bder_right bder_bttm">xRate BOB</th>
-              <th class="fa_c bder_right bder_bttm"">BOB - Local</th>
-              <th class="fa_c bder_right bder_bttm"">USD</th>
+              <th class="fa_c bder_right bder_bttm" "="">BOB - Local</th>
+              <th class="fa_c bder_right bder_bttm" "="">USD</th>
             </tr>
             <tr>
               <td class="bder_right">IPPF (Non Core, REGIONAL OFFICE)</td>
@@ -721,12 +1517,12 @@
               <th class="fa_r ccy c_total bder_right">20,958,819.00</th>
               <th class="fa_l"></th>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div class="title_h2">Expenses</div>
         <div class="content_grl">
           <table>
-            <tr>
+            <tbody><tr>
               <th class="fa_c bder_right bder_bttm" rowspan="2"></th>
               <th class="fa_c bder_right bder_bttm" colspan="4">Local - BOB</th>
               <th class="fa_c bder_right"></th>
@@ -793,7 +1589,7 @@
               <th class="fa_r ccy c_total bder_right">309,573.12</th>
               <th class="fa_l"></th>
             </tr>
-          </table>
+          </tbody></table>
         </div>
         <div class="title_h2">AR Reflection</div>
         <div class="content_grl">
@@ -821,6 +1617,172 @@
       </div>
     </div>
   </div>
+
+
 </body>
+
+<script>
+  jQuery( document ).ready( function() {
+    console.log("================= REPORT ");
+    new ABRProcessReport();
+});
+
+
+
+
+  function ABRProcessReport()
+  {
+
+    var me = this;
+    
+    me.processDataSetId = "CJeakCNH3CE";
+    me.projectDataSetId = "PYDHXJvhrFG";
+
+
+    me.orgUnitTag = $("#organisation");
+    me.periodTag = $("#period");
+    me.processOptionTag = $("#process");
+    me.reportPageTag = $("div.report");
+    me.loadingDivTag = $("#formLoadingDiv");
+
+    me.init = function()
+    {
+      me.clearReport();
+      me.initPeriod();
+      me.setUp_Events();
+    }
+
+    me.setUp_Events = function()
+    {
+      me.orgUnitTag.change( me.loadReport );
+      me.periodTag.change( me.loadReport );
+      me.processOptionTag.change( me.loadReport );
+    }
+
+    // Init data for report
+
+    me.initPeriod = function()
+    {
+      var curDate = new Date();
+      var curYear = eval( curDate.getFullYear() );
+
+      var end = curYear - 1; // Don't add current year
+      var start = curYear - 20;
+      me.periodTag.append("<option value=''>[Please select]</option>");
+      for( var i=end; i>=start; i-- ) 
+      {
+        me.periodTag.append("<option value='" + i + "'>" + i + "</option>");
+      }
+    }
+
+    // ========================================================================================================
+    // Main methods
+
+    me.loadReport = function()
+    {
+      me.reportPageTag.hide();
+      me.clearReport();
+
+      var orgUnit = me.orgUnitTag.val();
+      var period = me.periodTag.val();
+      var processOption = me.processOptionTag.val();
+
+      if( orgUnit != "" && period != "" && processOption != "" )
+      {
+        var selectedProcessOption = me.processOptionTag.find("option:selected");
+        // Load "Process" datavalues
+        var processId = selectedProcessOption.attr("process");
+        me.loadDataValues( me.processDataSetId, orgUnit, period, processId );
+
+        // Load "Project" dataValues
+        var projectId = selectedProcessOption.attr("project");
+        me.loadDataValues( me.projectDataSetId, orgUnit, period, projectId );
+
+      }
+
+
+    }
+
+   
+    // ========================================================================================================
+    // Support methods
+
+    me.loadDataValues = function( dataSetId, orgUnit, period, processOption )
+    {
+          var url = "../api/dataValueSets.json?dataSet=" + dataSetId + "&period=" + period + "&orgUnit=" + orgUnit + "&attributeOptionCombo=" + processOption;
+      
+          $.ajax(
+            {
+              type: "GET"
+              ,url: url
+              ,contentType: "application/json;charset=utf-8"
+              ,beforeSend: function( xhr ) 
+              {
+                me.hideReportTag();
+              }
+            ,success: function( response ) 
+            {		
+              console.log(response);
+              var dataValues = response.dataValues
+              for( var i in dataValues )
+              {
+                var dataValue = dataValues[i];
+                var key = dataValue.dataElement + "-" + dataValue.categoryOptionCombo;
+                me.reportPageTag.find( "[deId='" + key + "']" ).html( dataValue.value );
+              }
+            }
+            ,error: function(response)
+            {
+                // me.showReportTag();
+            }
+          }).always( function( data ) {
+            me.showReportTag();
+          });
+
+    }
+
+    me.clearReport = function()
+    {
+      me.reportPageTag.find( "[deId]").html("");
+    }
+
+    me.hideReportTag = function()
+    {
+      me.loadingDivTag.show();
+      me.reportPageTag.hide();
+    }
+
+    me.showReportTag = function()
+    {
+      me.loadingDivTag.hide();
+      me.reportPageTag.show();
+    }
+
+    // ========================================================================================================
+    me.init();
+
+
+  }
+
+  function RESTUtil() {};
+
+  
+  RESTUtil.getAsyncData = function( url, actionSuccess, actionError, doneFunc ) 
+  {
+    $.ajax({
+      type: "GET"
+      ,dataType: "json"
+      ,url: url
+      ,async: true
+      ,success: actionSuccess
+      ,error: actionError
+    })
+    .always( function( data ) {
+      if ( doneFunc !== undefined ) doneFunc();
+    });
+  }
+
+
+</script>
 
 </html>
